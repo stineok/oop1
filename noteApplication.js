@@ -1,51 +1,27 @@
 /* Create a class called NotesApplication */
 
 class NotesApplication {
-    let noteList =[];
-    constructor (author) {
+        constructor (author) {
     	this.author = author;
+    	this.note = [];
+	}
+	create(note_content){
+		this.note.push(note_content);
+		return 'Created';
 		
 	}
-}
-	
-	
-
-/*	
-	
-class 	
-	
-
-}
-
-class Order {
-	let items =[];
-	constructor (itemList) {
-	this.items = itemList;
+	listNotes() {
+		for(var i=0; i<this.note.length; i++){
+			console.log("Note ID: " +i);
+			console.log("Note Content: "+this.note[i]);
+			console.log("By Author " + this.author);
+		}
 	}
-	
-}
-
-class Customer {
-	const order;
-	let money;
-}
-
-class Waiter {
-	let money;
-}
-
-class Kitchen{
-	/**
-	* Get Order
-	*
-	* Kitchen receives order from the waiter
-	makeOrder() {
-	this.Order = new Order([{name:'margarita'}]);
-
+	get(note_id){
+		return this.note[note_id]
 	}
-
-
 }
-
-
-*/
+	
+var note = new NotesApplication('goat');
+note.create('the fell');
+note.listNotes();
