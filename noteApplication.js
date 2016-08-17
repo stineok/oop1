@@ -20,8 +20,25 @@ class NotesApplication {
 	get(note_id){
 		return this.note[note_id]
 	}
+	
+	search(search_text){
+		
+	}
+	
+	delete(note_id){
+		
+	}
+	
+	edit(note_id, new_content){
+		
+	}
 }
 	
-var note = new NotesApplication('goat');
-note.create('the fell');
+var note = new NotesApplication('Achabe');
+
+note.create('This Fall Apart');
+note.create('Oliver Twist');
+note.create('No Second Chance');
+
+
 note.listNotes();
