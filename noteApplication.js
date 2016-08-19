@@ -39,6 +39,7 @@ var note = new NotesApplication('Achabe');
 note.create('This Fall Apart');
 note.create('Oliver Twist');
 note.create('No Second Chance');
+note.create('Second Chance');
 
 
 note.listNotes();
